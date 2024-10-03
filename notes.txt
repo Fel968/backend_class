@@ -1,0 +1,17 @@
+http response status codes
+
+assignment
+create an endpoint to post booking
+create an endpoint to update a booking
+create an endpoint to delete a booking
+
+# put secret/confidential info here
+# why did it use a different username here
+use .env to store confidential info that would not be deployed with other files to github
+
+database models,rows,columns,tables,schema
+
+database to controller, controller to router, router to index.js
+
+class and class instance situations
+watch video on apis and linking to database
