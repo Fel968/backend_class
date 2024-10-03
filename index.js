@@ -10,7 +10,7 @@ const app = express()
 
 const PORT = 8080
 
-// for taking input
+// middleware for taking input
 app.use(express.json())
 
 // use everything in the all-route

@@ -15,3 +15,7 @@ database to controller, controller to router, router to index.js
 
 class and class instance situations
 watch video on apis and linking to database
+
+
+post to get all booking
+post 5 data and get it

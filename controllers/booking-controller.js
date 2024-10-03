@@ -12,17 +12,22 @@ export const getOneBooking = (req, res, next) => {
 
 export const postOneBooking = async(req, res, next) => {
 
-
-    //creates a new instance of your model 
-    const newBooking = await new booking() //booking from models, already imported at the top
-
-    // saves the data to the database and is a Mongoose method to persist/save the data.
-    const bookings = await newBooking.save(req.body)
-
-    res.status(201).json(bookings)
+   try {
+     //creates a new instance of your model 
+     const newBooking = new booking() //booking from models, already imported at the top
+ //booking from models, already imported at the top
+ 
+     // saves the data to the database and is a Mongoose method to persist/save the data.
+     const bookings = await newBooking.save(req.body)
+ 
+     res.status(201).json(bookings)
+   } catch (error) {
+    next(error)
+   }
 }
 
-export const updateOneBooking = (req, res, next) => {
+// update booking
+export const updateOneBooking = async (req, res, next) => {
     res.json('This booking is updated')
 }
 
