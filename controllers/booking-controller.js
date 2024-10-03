@@ -2,28 +2,24 @@
 // export and import
 import { booking } from "../models/booking-model.js";
 
-export const getAllBooking = (req, res, next) => {
+export const getAllBooking = (req, res) => {
 res.status(200).json('These are all the bookings')
 };
 
-export const getOneBooking = (req, res, next) => {
+export const getOneBooking = (req, res) => {
     res.json('This is one booking')
 };
 
-export const postOneBooking = async(req, res, next) => {
+export const postOneBooking = async(req, res) => {
 
-   try {
      //creates a new instance of your model 
-     const newBooking = new booking() //booking from models, already imported at the top
+     const newBooking = new booking(req.body) //booking from models, already imported at the top
  //booking from models, already imported at the top
  
      // saves the data to the database and is a Mongoose method to persist/save the data.
-     const bookings = await newBooking.save(req.body)
+     const bookings = await newBooking.save()
  
      res.status(201).json(bookings)
-   } catch (error) {
-    next(error)
-   }
 }
 
 // update booking

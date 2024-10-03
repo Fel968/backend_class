@@ -6,29 +6,29 @@ const bookingSchema = new Schema({
    
     firstName: {
         type: String,
-        // required: true
+        required: true
     },
     lastName: {
         type: String,
-        // required: true
+        required: true
     }, 
 
     sex: {
         type: String ,
         enum: {values: ['male', 'female']},
-        // required: true
+        required: true
     },
 
     seatNumber: {
         type: Number,
-        unique: true,
-        // required: true
+        // unique: true,
+        required: true
     },
 
     email: {
         type: String,
-        unique: true,
-        // required: true
+        // unique: true,
+        required: true
     }
 })
 
